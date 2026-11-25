@@ -11,7 +11,7 @@
   AFRAME.registerComponent('dragon', {
     init() {
       this.d = buildDragon(AFRAME.THREE);
-      this.d.object.scale.setScalar(.62);
+      this.d.object.scale.setScalar(.5);
       this.el.setObject3D('mesh', this.d.object);
       window.__dragon = this.d;
     },
@@ -19,7 +19,7 @@
   });
 </script>
 <style>
-  html, body { margin: 0; height: 100%; overflow: hidden; background: #000; font: 15px/1.4 system-ui, -apple-system, sans-serif; }
+  html, body { margin: 0; height: 100%; overflow: hidden; font: 15px/1.4 system-ui, -apple-system, sans-serif; }
   #hud { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; gap: 10px; align-items: center; justify-content: space-between;
          padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: linear-gradient(transparent, rgba(0,0,0,.65)); color: #fff; pointer-events: none; }
   #status { display: flex; align-items: center; gap: 8px; font-weight: 600; text-shadow: 0 1px 3px #000; }
